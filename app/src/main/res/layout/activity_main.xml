@@ -1,0 +1,268 @@
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9EADE"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+    <RelativeLayout
+        android:layout_width="409dp"
+        android:layout_height="354dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="144dp"
+        android:background="#14C31B"
+        android:layout_height="120dp"
+        android:onClick="start"
+        android:padding="10dp"
+        android:text="GO!"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHighlight="#7AC4CD"
+        android:textColorHint="#673AB7"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="87dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="607dp"
+        android:background="#00BCD4"
+        android:padding="10dp"
+        android:text="20s"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gameOverTextView"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167" />
+
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="87dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginBottom="607dp"
+        android:background="#30A2D6"
+        android:padding="10dp"
+        android:text="    0/0"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ruleTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <TextView
+        android:id="@+id/quesTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="100dp"
+        android:background="#FF5722"
+        android:text="             30+10"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/goButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="410dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quesTextView"
+        app:layout_constraintVertical_bias="0.245">
+
+        <Button
+            android:id="@+id/optionButton1"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:background="#14C31B"
+            android:onClick="chooseAnswer"
+            android:tag="0"
+            android:text="20"
+            android:textSize="60sp"
+            app:layout_column="0"
+            app:layout_row="0"
+            tools:visibility="invisible" />
+
+        <Button
+            android:id="@+id/optionButton2"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:background="#F1C51E1E"
+            android:onClick="chooseAnswer"
+            android:tag="1"
+            android:text="20"
+            android:textSize="60sp"
+            app:layout_column="1"
+            app:layout_row="0"
+            tools:visibility="invisible" />
+
+        <Button
+            android:id="@+id/optionButton3"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:background="#9A3FA6"
+            android:onClick="chooseAnswer"
+            android:tag="2"
+            android:text="20"
+            android:textSize="60sp"
+            app:layout_column="0"
+            app:layout_row="1"
+            tools:visibility="invisible" />
+
+        <Button
+            android:id="@+id/optionButton4"
+            android:layout_width="205dp"
+            android:layout_height="150dp"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="chooseAnswer"
+            android:tag="3"
+            android:text="20"
+            android:textSize="60sp"
+            app:layout_column="1"
+            app:layout_row="1"
+            tools:visibility="invisible" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/showResult"
+        android:layout_width="239dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="44dp"
+        android:textColor="#F44336"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.616"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/gameOverTextView"
+        android:layout_width="369dp"
+        android:layout_height="394dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="7dp"
+        android:text=" Time Up :-("
+        android:textColor="#221518"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/playAgain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTextView" />
+
+    <TextView
+        android:id="@+id/ruleTextView"
+        android:layout_width="318dp"
+        android:layout_height="272dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="25dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Rule:: The more you answer,the more you will score.Time limit is 30sec"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/quesTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="173dp"
+        android:layout_height="60dp"
+        android:background="#FFEB3B"
+        android:onClick="playAgain"
+        android:text="Play Again"
+        android:textColor="@android:color/holo_red_light"
+        android:textColorHint="#E91E63"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/showResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="39dp"
+        android:text="By N@veen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/showResult"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/volumeButton"
+        android:layout_width="45dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="566dp"
+        android:background="@drawable/volume"
+        android:onClick="volumeControl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ruleTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

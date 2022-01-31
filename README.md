@@ -1,5 +1,5 @@
 # Mind-Trainer-Game
-This game helps the children to boost their mind.
+This game helps the children to boost their mind.It gives sets of mathematical questions within 30 sec,more you answer more will score.
 <br>
 <br>
 # Screenshots
